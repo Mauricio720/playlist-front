@@ -1,3 +1,66 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "next",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "multiline-ternary": "off",
+    "react/display-name": "off",
+    "import/no-anonymous-default-export": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "no-redeclare": "off",
+    "no-new": "off",
+    "@typescript-eslint/no-extraneous-class": "off",
+    "@next/next/no-img-element": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "jsx-a11y/role-supports-aria-props": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "no-extend-native": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/no-redeclare": "off",
+    "import/export": "off",
+    "@typescript-eslint/method-signature-style": "off",
+    "@typescript-eslint/no-for-in-array": "off",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/no-unnecessary-type-assertion": "off"
+  }
 }
