@@ -11,9 +11,11 @@ export default function Menu({ children }: ParentElement) {
 
   return (
     <header
-      className={`transition-all ease-linear duration-1000 h-full flex flex-col bg-black ${
-        isOpenMenu ? "w-full" : "w-14"
-      } max-w-[250px] overflow-hidden`}
+      className={`h-full flex flex-col bg-black  ${
+        isOpenMenu
+          ? "animate-[menuOpenAnimation_1s_ease-in-out_forwards]"
+          : "animate-[menuCloseAnimation_1s_ease-in-out_forwards]"
+      }  max-w-[250px] overflow-hidden`}
     >
       <div
         className="p-2 w-full flex justify-center"
@@ -47,6 +49,7 @@ interface Item extends ParentElement {
 
 Menu.Item = ({ children, route = "/" }: Item) => {
   const { replace } = useRouter();
+
   return (
     <li
       className="hover:bg-white flex items-center m-2 w-[250px]"
