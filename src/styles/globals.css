@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  border: 0px;
+  margin: 0px;
+}
+
+.default__button {
+  @apply w-full h-10 mt-8 bg-black text-white rounded-md;
+}
+
+.input__default {
+  @apply border border-solid border-gray-400 rounded-md h-10 p-2;
+}
